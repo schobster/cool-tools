@@ -5,7 +5,7 @@ This tool can be used to bulk-modify the keys in an AWS S3 bucket.
 In order to make the tool update keys in the way you need, you must define two functions in your version of the python script:
 1) A function which evaluates a key(string) and returns True if the key needs to be updated. This allows you to identify specific keys which have an erroneous name. If you want to update every single key in a bucket, just write a stub function which returns True.
     
-2) A function which accepts the current string value of the key, and returns the new key. 
+2) A function which accepts the current string value of the key, performs some transformation you'd like, and returns the new key. 
 
 You must also set the S3_BUCKET global to the name of the S3 bucket you would like to update.
 
