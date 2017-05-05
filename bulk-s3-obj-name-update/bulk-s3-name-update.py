@@ -35,7 +35,7 @@ def bulk_update_key_names(needs_update, generate_new_key):
     """
     Iterate through all keys in an s3 bucket, evaluate each for whether it should be updated, then perform the update.
     :param needs_update: a function returning a Boolean value indicating whether or not a key needs to be updated 
-    :param generate_new_key: a function which takes in an existing key and returns  
+    :param generate_new_key: a function which takes in an existing key and returns the desired new key.
     """
     keys = get_keys_in_bucket()
     for key in keys:
